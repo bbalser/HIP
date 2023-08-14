@@ -9,12 +9,13 @@
 
 ## Summary
 
-Change the oracle reward epoch from 01:00:00 UTC - 00:59:59 UTC to 00:00:00 UTC - 23:59:59 UTC.  
+Change the oracle reward epoch, which currently starts at 01:00:00 UTC and goes until the 01:00:00 UTC the following day, 
+to starting at 00:00:00 UTC and going until 00:00:00 UTC the following day.
 
 ## Motivation
 
 Because the reward curve always changes at 00:00:00 UTC, ex. 2023-08-01 00:00:00 UTC, having the rewards epoch
-start at 00:00:00 UTC and end at 23:59:59 UTC allows all the rewards in the epoch to be earned at the
+start and end at 01:00:00 UTC allows all the rewards in the epoch to be earned at the
 same rate.
 
 ## Stakeholders
@@ -23,10 +24,19 @@ This proposal impacts all current and future participants in the Helium IoT & Mo
 
 ## Detailed Explanation
 
-On a date to be specified, the reward epoch will be a 23 hour epoch from 01:00:00 UTC to 23:59:59 UTC.
-After this date, the rewards epoch will always be a 24 hour epoch that start at 00:00:00 UTC and ends at 23:59:59 UTC.
+On a date to be specified, the reward epoch will be a 23 hour epoch from 01:00:00 UTC to 
+After this date, the rewards epoch will always be a 24 hour epoch that start at 00:00:00 UTC and ends at 00:00:00 UTC.
+
+The following table outlines the total reward pool for a 24 hour epoch and what the rewards would be for a 23 hour epoch.
+
+|   | 24 hour epoch | 23 hour epoch |
+| - | ------------- | ------------- |
+| IOT | 88,797,814.21 | 85,097,905.28 |
+| MOBILE | 81,967,213.11 | 78,551,912.57 |
+
 
 ## Drawbacks
 
 There will be one day where rewards will be for a 23 hour epoch.
 
+* All time ranges have an inclusive start and exclusive end
