@@ -14,7 +14,7 @@ to starting at 00:00:00 UTC and going until 00:00:00 UTC the following day.
 
 ## Motivation
 
-Having the reward epoch include data from 2 different calendar dates added complexity for the recent havening. 
+Having the reward epoch include data from 2 different calendar dates added complexity for the recent halvening. 
 The rewards calculated at 2023-08-01 01:30:00 UTC included 23 hours of data from July 31st and 1 hour of data
 from August 1st and since the halvening happened at August 1st 00:00:00 UTC, then this last hour earned rewards
 at a different rate than the previous 23 hours. Changing the reward epoch to be from 00:00:00 UTC to 00:00:00 UTC
@@ -29,7 +29,8 @@ This proposal impacts all current and future participants in the Helium IoT & Mo
 On a date to be specified, the reward epoch will be a 23 hour epoch from 01:00:00 UTC to 00:00:00 UTC. 
 After this date, the rewards epoch will always be a 24 hour epoch that start at 00:00:00 UTC and ends at 00:00:00 UTC.
 
-The following table outlines the total reward pool for a 24 hour epoch and what the rewards would be for a 23 hour epoch.
+The following table outlines the total reward pool for a 24 hour epoch and what the rewards would be for a 23 hour epoch
+within the 2023-2024 portion of the emission curve.
 
 |   | 24 hour epoch | 23 hour epoch |
 | - | ------------- | ------------- |
